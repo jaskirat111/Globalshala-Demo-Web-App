@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Globalshala
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bitter:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tnc.css">
+  <!-- CSS Just for Register purpose, don't include it in your project -->
+ 
+  <!-- Your custom styles (optional) -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="assets1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="assets1/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="assets1/css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="assets6/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../assets2/css/Register.css" />
+  <link rel="stylesheet" type="text/css" href="../assets2/css/elastic_grid.min.css" /> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<style>
+body{
+background-image: url("../img/black.jpg");
+}
+h5{font-size: 15px}
+h2{ color: aliceblue;
+  font-size: 55px;
+  font-family: 'Lobster', cursive;
+  
+}
+</style>
+</head>
+
+<body class="dark-edition">
+  {% block content %}
+  {% if Event.seats==0 %} 
+  <script>  document.getElementById("button").disabled = true; </script>
+    {%endif%}
+    {% if Event.seats!==0 %} 
+    <script>   document.getElementById("button").disabled = false; </script>   
+    {%endif%}
+    
+   
+     
+      <div class="content">
+
+        <main>
+            <div class="container-fluid" style="padding :40px 40px 40px 40px">
+              <section >
+                  <div class="backBtn">
+                      <br>
+                      <br>
+                      <span class="line tLine"></span>
+                      <span class="line mLine"></span>
+                      <a class="label" href="/">Back</a>
+                      <span class="line bLine"></span>
+                  </div>
+                <center><h2>Upcoming Events</h2></center>
+               
+                  <!-- <div id="slider"  class="col-lg-12 col-md-12 col-sm-12">
+                       <a href="#" class="control_next"></a>
+                      <a href="#" class="control_prev"></a> -->
+
+                      <!-- <ul> -->
+                          <!-- {% for Event in Events %} -->
+                        <!-- <li><img src="{{Event.imagelink}}" style="height: 100%; width: 100%;"></li> -->
+                        <!-- {% endfor %}   -->
+                        <!-- <li style="background: #aaa;">SLIDE 2</li>
+                        <li>SLIDE 3</li>
+                        <li style="background: #aaa;">SLIDE 4</li> -->
+                      <!-- </ul>   -->
+                    <!-- </div> -->
+                    <!-- <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/"> -->
+                    <div id="captioned-gallery">
+                        
+                      <figure class="slider">
+                          {% for image in Images %}
+                        <figure>
+                          <img src="{{image.imagesrc}}" alt>
+                          <figcaption>{{image.category}}</figcaption>
+                        </figure>
+                        {% endfor %}
+                        <figure>
+                          <img src="img/Artificial-intelligence.jpg" alt>
+                          <figcaption>Artificial Intelligence </figcaption>
+                        </figure>
+                      </figure>
+                     
+                    </div>
+                  <div class="row wow fadeIn">
+                  {% for Event in Events %}
+                  
+                       
+                        
+                          <!-- <div id="elastic_grid_Register"> </div> -->
+                          <div class="col-lg-3 col-md-6 mb-4">
+    
+                              <!--Card-->
+                              <div class="card">
+                  
+                                <!--Card image-->
+                                <div class="view overlay">
+                                  <img src="{{Event.imagelink}}" class="card-img-top"
+                                    alt="" style="height: 300px;">
+                                  <a href="{{Event.imagelink}}">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+                                <!--Card image-->
+                  
+                                <!--Card content-->
+                                <div class="card-body text-center" style="background-color:rgb(14, 36, 68)">
+                                  <!--Category & Title-->
+                                  <a href="{{Event.imagelink}}" class="grey-text">
+                                    <!-- <h6>Artificial Intelligence/ML</h6> -->
+                                    <h5 class="font-weight-bold white-text">
+                                      <strong>{{Event.name}}</strong>
+                                    </h5>
+                                  </a>
+                                  <h6>
+                                    <strong>
+                                      <a href="" class="dark-grey-text">
+                                        <span class="badge badge-pill danger-color">Limited Seats Only</span>
+                                      </a>
+                                    </strong>
+                                  </h6>
+                                 
+                                  <h5 class="font-weight-bold white-text">
+                                      <strong>Location:{{Event.location}}</strong>
+                                    </h5>
+                                    <h5 class="font-weight-bold white-text">
+                                        <strong>Fees:{{Event.fees}}Rs</strong>
+                                      </h5>
+                                      <h5 class="font-weight-bold white-text">
+                                          <strong>Event Date:{{Event.date}}</strong>
+                                        </h5>
+                                        <h5 class="font-weight-bold white-text">
+                                          <strong>Number of Seats Left:{{Event.seats}}</strong>
+                                        </h5>
+                                      <h5 class="font-weight-bold white-text">
+                                          <strong>Last date to apply:{{Event.lastdate}}</strong>
+                                        </h5>
+                                        <button id= "button" class="btn btn-default"><a href="{{Event.link}}">About Event</a></button>
+
+                                        <form action="/bid/event/{{Event.id}}" method="POST">
+                                          <input type="hidden" value="{{Event.name}}" name="name">
+                                          <input type="hidden" value="{{Event.fees}}" name="fees">
+                                          <input type="hidden" value="{{Event.date}}" name="date">
+                                          <input type="hidden" value="{{Event.id}}" name="id">
+                                          <input type="hidden" value="{{Event.seats}}" name="seats">
+                                        <h5 class="font-weight-bold white-text">
+                                           
+                                            <button id= "button" type="submit" class="btn btn-default">Register</button>
+                                          <!-- <strong><input type="submit" value="REGISTER"></strong> -->
+
+
+                                        </h5>  
+                                        </form>
+                                         <!-- <center><a href="/bid/event/{{Event.id}}"><button type="submit" class="btn btn-default">Register</button></a></center> -->
+
+                                </div>
+                                <!--Card content-->
+                  
+                              </div>
+                              <!--Card-->
+                  
+                            </div>
+                      
+                        
+                    {% endfor %}
+                       </div>
+
+                   
+                </section>
+
+              </div>
+        </main> 
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+         <script src="js/slider.js"></script>
+        <script type="text/javascript" src="assets1/js/jquery-3.3.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="assets1/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="assets1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="assets1/js/mdb.min.js"></script>
+        <!-- Initializations -->
+        <script type="text/javascript">
+          // Animations initialization
+          new WOW().init();
+      
+        </script>  
+      <footer class="footer">
+        <div class="container-fluid">
+          <!--<nav class="float-left">
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="https://creative-tim.com/presentation">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="https://www.creative-tim.com/license">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>-->
+          <div class="copyright float-right" id="date">
+            , made <!--<i class="material-icons">favorite</i>-->by
+            <a href="https://www.globalshala.com" target="_blank">globalshala</a>.
+          </div>
+        </div>
+      </footer>
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy; ' + x + date.innerHTML;
+      </script>
+    </div>
+
+  </div>
+  
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="https://unpkg.com/default-passive-events"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
+  <!-- Material Dashboard Register methods, don't include it in your project! -->
+  <script src="assets/Register/Register.js"></script>
+  
+  
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = false;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = false;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == false) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = false;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/Registers.js
+      md.initDashboardPageCharts();
+
+    });
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="assets2/js/modernizr.custom.js"></script>
+<script src="assets2/js/classie.js"></script>
+<!--- uncompress-->
+
+<script type="text/javascript" src="assets2/js/jquery.elastislide.js"></script>
+<script type="text/javascript" src="assets2/js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="assets2/js/elastic_grid.js"></script>
+
+<!-- compress version
+<script type="text/javascript" src="js/elastic_grid.min.js"></script>
+-->
+{% for Event in Events %}
+{% if Event.category =='1' %}
+<script type="text/javascript">
+$(function(){
+$("#elastic_grid_Register").elastic_grid({
+'showAllText' : 'All',
+'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+'hoverDirection': false,
+'hoverDelay': 0,
+'hoverInverse': false,
+'expandingSpeed': 500,
+'expandingHeight': 500,
+'items' :
+[
+{
+      'title'         : '{{Event.name}}',
+      'description'   : 'According to the father of Artificial Intelligence, John McCarthy, it is “The science and engineering of making intelligent machines, especially intelligent computer programs".Artificial Intelligence is a way of making a computer, a computer-controlled robot, or a software think intelligently, in the similar manner the intelligent humans think.AI is accomplished by studying how human brain thinks, and how humans learn, decide, and work while trying to solve a problem, and then using the outcomes of this study as a basis of developing intelligent software and systems.',
+      'thumbnail'     : ['../images/small/cybersecurity1.jpg'],
+      'large'         : ['../images/large/artificial.jpg','../images/large/bigdata.jpg','../images/large/cloudcomputing.jpg','../images/large/cluster.jpg'],
+      'img_title'     : ['Artificial Intelligence ', 'jquery elastic grid 2', 'jquery elastic grid 3', 'jquery elastic grid 4', 'jquery elastic grid 5'],
+      'button_list'   :
+      [
+        
+          { 'title':'Register', 'url':'http://porfolio.bonchen.net/', 'new_window' : false}
+      ],
+      'tags'          : ['{{Event.name}}']
+  }
+  ]
+});
+});
+</script>
+ {% endif %}
+ {% if Event.category =='4' %}
+<script type="text/javascript">
+$(function(){
+$("#elastic_grid_Register4").elastic_grid({
+'showAllText' : 'All',
+'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+'hoverDirection': false,
+'hoverDelay': 0,
+'hoverInverse': false,
+'expandingSpeed': 500,
+'expandingHeight': 500,
+'items' :
+[ 
+{
+      'title'         : '{{Event.name}}',
+      'description'   : 'Computer security, cybersecurity or information technology security is the protection of computer systems from theft or damage to their hardware, software or electronic data, as well as from disruption or misdirection of the services they provide.',
+      'thumbnail'     : ['../images/small/cybersecurity.jpg'],
+      'large'         : ['../images/large/cybersecurity.jpg'],
+      'img_title'     : ['Cybersecurity'],
+      'button_list'   :
+      [
+          { 'title':'Register', 'url' : 'http://porfolio.bonchen.net/', 'new_window' : false }
+    
+      ],
+      'tags'          : ['{{Event.name}}']
+  }
+]
+});
+});
+</script>
+ {% endif %}
+ {% if Event.category =='2' %}
+<script type="text/javascript">
+$(function(){
+$("#elastic_grid_Register2").elastic_grid({
+'showAllText' : 'All',
+'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+'hoverDirection': false,
+'hoverDelay': 0,
+'hoverInverse': false,
+'expandingSpeed': 500,
+'expandingHeight': 500,
+'items' :
+[ 
+{
+      'title'         : '{{Event.name}}',
+      'description'   : 'Graphic design is the process of visual communication and problem-solving through the use of typography, photography and illustration. The field is considered a subset of visual communication and communication design, but sometimes the term "graphic design" is used synonymously.',
+      'thumbnail'     : ['../images/small/graphic.jpg','../images/small/graphic1.jpg'],
+      'large'         : ['../images/large/graphic.jpg','../images/large/graphic1.jpg'],
+      'img_title'     : ['Graphic Design'],
+      'button_list'   :
+      [
+          { 'title':'Register', 'url' : 'http://porfolio.bonchen.net/', 'new_window' : false }
+    
+      ],
+      'tags'          : ['{{Event.name}}']
+  }
+]
+});
+});
+</script>
+ {% endif %}
+ {% if Event.category =='3' %}
+ <script type="text/javascript">
+ $(function(){
+ $("#elastic_grid_Register3").elastic_grid({
+ 'showAllText' : 'All',
+ 'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+ 'hoverDirection': false,
+ 'hoverDelay': 0,
+ 'hoverInverse': false,
+ 'expandingSpeed': 500,
+ 'expandingHeight': 500,
+ 'items' :
+ [ 
+ {
+      'title'         : 'Event.name',
+      'description'   : 'About:{{Event.about}},Location:Location:{{Event.location}},Date: {{Event.date}}',
+      'thumbnail'     : ['../images/small/marketing.jpg'],
+      'large'         : ['../images/large/marketing.jpg'],
+      'img_title'     : ['Marketing'],
+      'button_list'   :
+      [
+          { 'title':'Register', 'url' : 'http://porfolio.bonchen.net/', 'new_window' : false },
+          
+      ],
+      'tags'          : ['Event.name']
+  }
+ ]
+ });
+ });
+ </script>
+  {% endif %}
+  {% if Event.category =='5' %}
+  <script type="text/javascript">
+  $(function(){
+  $("#elastic_grid_Register5").elastic_grid({
+  'showAllText' : 'All',
+  'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+  'hoverDirection': false,
+  'hoverDelay': 0,
+  'hoverInverse': false,
+  'expandingSpeed': 500,
+  'expandingHeight': 500,
+  'items' :
+  [ 
+  {
+      'title'         : '{{Event.name}}',
+      'description'   : 'About:{{Event.about}},Location:Location:{{Event.location}},Date: {{Event.date}}',
+      'thumbnail'     : ['../images/small/javascript.jpg'],
+      'large'         : ['../images/large/javascript.jpg'],
+      'img_title'     : ['Web Development-Javascript'],
+      'button_list'   :
+      [
+          { 'title':'Register', 'url' : 'http://porfolio.bonchen.net/', 'new_window' : false },
+          
+      ],
+      'tags'          : ['{{Event.name}}']
+  }
+  ]
+  });
+  });
+  </script>
+   {% endif %} 
+   {% if Event.category =='6' %}
+   <script type="text/javascript">
+   $(function(){
+   $("#elastic_grid_Register6").elastic_grid({
+   'showAllText' : 'All',
+   'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+   'hoverDirection': false,
+   'hoverDelay': 0,
+   'hoverInverse': false,
+   'expandingSpeed': 500,
+   'expandingHeight': 500,
+   'items' :
+   [ 
+   {
+       'title'         : '{{Event.name}}',
+       'description'   : 'About:{{Event.about}},Location:Location:{{Event.location}},Date: {{Event.date}}',
+       'thumbnail'     : ['../images/small/javascript.jpg'],
+       'large'         : ['../images/large/javascript.jpg'],
+       'img_title'     : ['{{Event.name}}'],
+       'button_list'   :
+       [
+           { 'title':'Register', 'url' : 'http://porfolio.bonchen.net/', 'new_window' : false },
+           
+       ],
+       'tags'          : ['{{Event.name}}']
+   }
+   ]
+   });
+   });
+   </script>
+    {% endif %}   
+    {% if Event.category =='7' %}
+    <script type="text/javascript">
+    $(function(){
+    $("#elastic_grid_Register7").elastic_grid({
+    'showAllText' : 'All',
+    'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+    'hoverDirection': false,
+    'hoverDelay': 0,
+    'hoverInverse': false,
+    'expandingSpeed': 500,
+    'expandingHeight': 500,
+    'items' :
+    [ 
+    {
+        'title'         : '{{Event.name}}',
+        'description'   : ' About:{{Event.about}},Location:Location:{{Event.location}},Date: {{Event.date}}',
+        'thumbnail'     : ['../images/small/javascript.jpg'],
+        'large'         : ['../images/large/javascript.jpg'],
+        'img_title'     : ['{{Event.name}}'],
+        'button_list'   :
+        [
+            { 'title':'Register', 'url' : 'http://porfolio.bonchen.net/', 'new_window' : false },
+            
+        ],
+        'tags'          : ['{{Event.name}}']
+    }
+    ]
+    });
+    });
+    </script>
+     {% endif %}       
+ {% endfor %}
+
+
+
+</body>
+{% endblock %}
+
+</html>

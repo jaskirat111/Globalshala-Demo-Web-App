@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Globalshala</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Globalshala" />
+    <meta name="keywords" content="admission in university" />
+    <meta name="author" content="Bucky Maler" />
+    <link rel="stylesheet" href="../css/main1.css" />
+
+    <link
+      rel="stylesheet"
+      href="../css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link
+      href="../vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="../vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+      href="../vendor/select2/select2.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="../vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="../css/form.css" rel="stylesheet" media="all" />
+    <link href="../css/form.scss" rel="stylesheet" media="all" />
+    <!-- <script>
+$('#myDiv').change(function() {
+  var values = [];
+  {
+    $('#myDiv :checked').each(function() {
+      //if(values.indexOf($(this).val()) === -1){
+      values.push($(this).val());
+      // }
+    });
+    console.log(values);
+  }
+});
+</script> -->
+  </head>
+
+  <!-- <script>
+  $('input[type="checkbox"]').on('change', function(e){
+         if($(this).prop('checked'))
+         {
+             $(this).next().val(1);
+         } else {
+             $(this).next().val(0);
+         }
+ });
+  </script> -->
+
+  <body style="background-color: black;">
+    {% block content %}
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+          <div class="card-body">
+            <center>
+              <h2 class="title"><b>Student Registration Form</b></h2>
+            </center>
+            <form method="post" action="/users/register" class="work-request">
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Username</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="text"
+                      spellcheck="false"
+                      name="username"
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Email</label>
+                    <input
+                      required
+                      id="email"
+                      required
+                      class="input--style-4"
+                      type="email"
+                      spellcheck="false"
+                      name="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Phone</label>
+                    <input
+                      type="text"
+                      required
+                      class="input--style-4"
+                      name="phone"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">College</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="text"
+                      spellcheck="false"
+                      name="college"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Password</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="password"
+                      spellcheck="false"
+                      name="password"
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Confirm Password</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="password"
+                      spellcheck="false"
+                      name="password2"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row row-space">
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            
+                            </div> -->
+              <p>Select your choice of field:</p>
+              <div class="work-request--options">
+                <!-- <span class="options-b"> -->
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-1"
+                      name="ArtificialIntelligence0"
+                      type="checkbox"
+                      value="true"
+                    />
+                    <label for="opt-1">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      AI/ML </label
+                    >&nbsp;
+                    <input
+                      name="ArtificialIntelligence"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+
+                  &nbsp;&nbsp;&nbsp;
+
+                  <div class="col-2">
+                    <input
+                      id="opt-2"
+                      type="checkbox"
+                      value="true"
+                      name="ContentWriting0"
+                    />
+                    <label for="opt-2">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Content writing </label
+                    >&nbsp;
+                    <input
+                      name="ContentWriting"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+                </div>
+
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-3"
+                      type="checkbox"
+                      value="true"
+                      name="Marketing0"
+                    />
+                    <label for="opt-3">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Digital Marketing </label
+                    >&nbsp;
+                    <input
+                      name="Marketing"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+
+                  <div class="col-2">
+                    <input
+                      id="opt-4"
+                      type="checkbox"
+                      value="true"
+                      name="Cybersecurity0"
+                    />
+                    <!-- <input id="opt-4" type="checkbox" value="wifi" name="amenities" ,checked=(true:false ? "checked" : undefined) > -->
+                    <!-- <input type="checkbox" name="checked" value="true" > -->
+                    <label for="opt-4">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Cyber Security </label
+                    >&nbsp;
+                    <input
+                      name="Cybersecurity"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+                </div>
+
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-5"
+                      type="checkbox"
+                      value="true"
+                      name="WebDevelopmentJavascript0"
+                    />
+                    <label for="opt-5">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Web Development-Mean Stack </label
+                    >&nbsp;
+                    <input
+                      name="WebDevelopmentJavascript"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+
+                  <div class="col-2">
+                    <input
+                      id="opt-6"
+                      type="checkbox"
+                      value="true"
+                      name="WebDevelopmentPHP0"
+                    />
+                    <label for="opt-6">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      &nbsp;&nbsp;Web Development-PHP </label
+                    >&nbsp;
+                    <input
+                      name="WebDevelopmentPHP"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+                </div>
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-7"
+                      type="checkbox"
+                      value="true"
+                      name="Blockchain0"
+                    />
+                    <label for="opt-7">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Block Chain </label
+                    >&nbsp;
+                    <input
+                      name="Blockchain"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+
+                  <div class="col-2">
+                    <input
+                      id="opt-8"
+                      type="checkbox"
+                      value="true"
+                      name="CloudComputing0"
+                    />
+                    <label for="opt-8">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      &nbsp;&nbsp;Cloud Computing </label
+                    >&nbsp;
+                    <input
+                      name="CloudComputing"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+                </div>
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-9"
+                      type="checkbox"
+                      value="true"
+                      name="Android0"
+                    />
+                    <label for="opt-9">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Android </label
+                    >&nbsp;
+                    <input
+                      name="Android"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+
+                  <div class="col-2">
+                    <input
+                      id="opt-10"
+                      type="checkbox"
+                      value="true"
+                      name="Ios0"
+                    />
+                    <label for="opt-10">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      &nbsp;&nbsp;Ios </label
+                    >&nbsp;
+                    <input name="Ios" type="checkbox" value="false" checked />
+                  </div>
+                </div>
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-11"
+                      type="checkbox"
+                      value="true"
+                      name="Linux0"
+                    />
+                    <label for="opt-11">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Linux </label
+                    >&nbsp;
+                    <input name="Linux" type="checkbox" value="false" checked />
+                  </div>
+
+                  <div class="col-2">
+                    <input
+                      id="opt-12"
+                      type="checkbox"
+                      value="true"
+                      name="GraphicDesign0"
+                    />
+                    <label for="opt-12">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      &nbsp;&nbsp;Graphic design </label
+                    >&nbsp;
+                    <input
+                      name="GraphicDesign"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+                </div>
+                <div class="row row-space">
+                  <div class="col-2">
+                    <input
+                      id="opt-13"
+                      type="checkbox"
+                      value="true"
+                      name="WebDevelopmentPython0"
+                    />
+                    <label for="opt-13">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 150 111"
+                        style="enable-background: new 0 0 150 111;"
+                        xml:space="preserve"
+                      >
+                        <g
+                          transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)"
+                        >
+                          <path
+                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"
+                          />
+                        </g>
+                      </svg>
+                      Python With Django And Flask </label
+                    >&nbsp;
+                    <input
+                      name="WebDevelopmentPython"
+                      type="checkbox"
+                      value="false"
+                      checked
+                    />
+                  </div>
+                </div>
+                <!-- <input id="opt-7" type="checkbox" value="true" name="WebDevelopmentPython0"> -->
+                <!-- <label for="opt-7">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                                        </g>
+                                        </svg>
+                                        Web Development-Python
+                                      </label>&nbsp;
+                                      <input  name="WebDevelopmentPython" type="checkbox" value="false" checked> -->
+                <!-- </span> -->
+              </div>
+              <!-- <div class="input-group">
+                              <label class="label">Subject</label>
+                              <div class="rs-select2 js-select-simple select--no-search">
+                                  <select name="subject">
+                                      <option disabled="disabled" selected="selected">Choose option</option>
+                                      <option>Subject 1</option>
+                                      <option>Subject 2</option>
+                                      <option>Subject 3</option>
+                                  </select>
+                                  <div class="select-dropdown"></div>
+                              </div>
+                          </div> -->
+              <input type="hidden" value="true" name="isUser" />
+              <input type="hidden" value="user" name="type" />
+              <div class="p-t-15">
+                <center>
+                  <button class="btn btn--radius-2 btn--blue" type="submit">
+                    Submit
+                  </button>
+                </center>
+              </div>
+            </form>
+            <br />
+
+            <div>
+              Already have an account <a href="../../users/login">Login here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../vendor/select2/select2.min.js"></script>
+    <script src="../vendor/datepicker/moment.min.js"></script>
+    <script src="../vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../js/global.js"></script>
+  </body>
+  {% endblock %}
+</html>

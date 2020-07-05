@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Globalshala</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Globalshala" />
+    <meta
+      name="keywords"
+      content="Internship, Web Development, Ethical Hacking, BloockChain, Starttups, Corporates"
+    />
+    <meta name="author" content="Bucky Maler" />
+    <!-- <link rel="stylesheet" href="../../css/register.css">
+  <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    <link href="../IN Nexux.png" rel="stylesheet" media="all" />
+    <link
+      href="../../vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+      href="../../vendor/select2/select2.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="../../vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="../../css/form.css" rel="stylesheet" media="all" />
+  </head>
+  <body style="background-color: black;">
+    {% if message %}
+    <center>
+      <div
+        style="
+          position: fixed;
+          width: 100%;
+          color: white;
+          background-color: red;
+        "
+      >
+        {{ message }}
+      </div>
+    </center>
+    {% endif %}
+
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+          <div class="card-body">
+            <center><h2 class="title">User Login</h2></center>
+            <form method="post" action="/users/login">
+              <!-- <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">first name</label>
+                                    <input required class="input--style-4" type="text" name="first_name">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">last name</label>
+                                    <input required class="input--style-4" type="text" name="last_name">
+                                </div>
+                            </div>
+                        </div> -->
+              <!-- <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Birthday</label>
+                                    <div class="input-group-icon">
+                                        <input required class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input  value="Male" type="radio" checked="checked" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input value="Female" type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+              <div class="input-group">
+                <label class="label">Email</label>
+                <input
+                  required
+                  class="input--style-4"
+                  type="email"
+                  name="username"
+                />
+              </div>
+
+              <!-- <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input required class="input--style-4" type="text" name="phone">
+                                </div>
+                            </div> -->
+
+              <div class="input-group">
+                <label class="label">Password</label>
+                <input
+                  required
+                  class="input--style-4"
+                  type="password"
+                  name="password"
+                />
+              </div>
+
+              <!-- <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Confirm Password</label>
+                                    <input  required class="input--style-4" type="text" name="password2">
+                                </div>
+                            </div>
+                        </div> -->
+              <!-- <div class="input-group">
+                            <label class="label">Subject</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="subject">
+                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option>Subject 1</option>
+                                    <option>Subject 2</option>
+                                    <option>Subject 3</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div> -->
+              <div class="p-t-15">
+                <center>
+                  <a href="../../forgots/forgot" style="text-decoration: none;"
+                    >I forgot my Password</a
+                  >
+                </center>
+              </div>
+              <div class="p-t-15">
+                <center>
+                  <button class="btn btn--radius-2 btn--blue" type="submit">
+                    Submit
+                  </button>
+                </center>
+              </div>
+              <br />
+
+              <div>
+                Do not have an account
+                <a href="../../users/register">Register here</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../../vendor/select2/select2.min.js"></script>
+    <script src="../../vendor/datepicker/moment.min.js"></script>
+    <script src="../../vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../../js/global.js"></script>
+  </body>
+</html>

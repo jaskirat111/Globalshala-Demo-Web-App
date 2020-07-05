@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Globalshala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="https://apis.google.com/js/api:client.js"></script>
+
+  <style type="text/css">
+    #customBtn {
+      display: inline-block;
+      background:  #0f33ff;
+      color: white;
+      width: 100%;
+      border-radius: 5px;
+      border: thin solid white;
+      box-shadow: 1px 1px 1px white;
+      white-space: nowrap;
+    }
+    #customBtn:hover {
+      cursor: pointer;
+    }
+    span.label {
+      font-family: serif;
+      font-weight: normal;
+    }
+    span.icon {
+      background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 42px;
+      height: 42px;
+    }
+    span.buttonText {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 42px;
+      padding-right: 42px;
+      font-size: 24px;
+      font-weight: bold;
+      /* Use the Roboto font that is loaded in the <head> */
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="../img/logo.png" alt="Global">
+    <p>Globalshala</p>
+  </a>
+</div>
+
+
+  
+    <!-- <div id="viewport" class="l-viewport"> -->
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="../img/logo.png" alt="Global">
+            <p>Globalshala</p>
+          </a>
+          
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <center>
+              <h2>OTP Verification</h2>
+              <form class="work-request" method="post" action="/users/verify2">
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input name="pin"  type="text" required>
+                    <input name="requestId" type="hidden" value="{{requestId}}" >
+                    <label>Enter the OTP</label>
+                  </div>
+                 
+                </div>
+                <br>
+                  <input type="submit" value="Verify PIN">
+                  <br>
+                </form>
+              </center>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+       
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        
+        
+  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="../js/functions-min.js"></script>
+</body>
+</html>
+

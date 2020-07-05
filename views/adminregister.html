@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Globalshala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Globalshala">
+  <meta name="keywords" content="Internship, Web Development, Ethical Hacking, BloockChain, Starttups, Corporates">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- <script>
+$('#myDiv').change(function() {
+  var values = [];
+  {
+    $('#myDiv :checked').each(function() {
+      //if(values.indexOf($(this).val()) === -1){
+      values.push($(this).val());
+      // }
+    });
+    console.log(values);
+  }
+});
+</script> -->
+</head>
+<body>
+  {% block content %}
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="/img/logo.png" alt="Globalshala">
+    <p>Globalshala</p>
+  </a>
+</div>
+
+
+  
+    <!-- <div id="viewport" class="l-viewport"> -->
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="/img/logo.png" alt="Globalshala">
+            <p>Globalshala</p>
+          </a>
+          
+        </header>
+        <div class="container">
+         
+              <center>
+              <h2>Admin registration</h2>
+              
+              <form class="work-request" method="post" action="/users/adminregister">
+                
+                <div class="work-request--information">
+                  <div class="information-name">
+                      
+                      <input required id="name" type="text" spellcheck="false" name="name">
+                      <center><label for="name">Name</label></center>
+                  </div>
+                  <div class="information-name">
+                      <input required id="email" type="email" spellcheck="false" name="email">
+                      <center><label for="email">Email</label></center>
+                  </div>
+                  <div class="information-name">
+                    <input type="text" name="phone" required>
+                    <center><label>Phone Number</label></center>
+                </div>
+                  <div class="information-name">
+                      <input required id="name" type="password" spellcheck="false" name="password">
+                      <center><label for="name">Password</label></center>
+                  </div>
+                  <div class="information-name">
+                      <input required id="name" type="password" spellcheck="false" name="password2">
+                      <center><label for="name">Confirm Password</label></center>
+                  </div>
+                </div><br>
+                <input type="hidden" value="true" name="isAdmin">
+                <input type="hidden" value="admin" name="type">
+               <center> <input type="submit" value="Submit"></center>
+                  
+            </form>
+          
+          </div>
+</body>
+<!-- <script>
+  $('input[type="checkbox"]').on('change', function(e){
+         if($(this).prop('checked'))
+         {
+             $(this).next().val(1);
+         } else {
+             $(this).next().val(0);
+         }
+ });
+  </script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="/js/functions-min.js"></script>
+</body>
+{% endblock %}
+</html>
+

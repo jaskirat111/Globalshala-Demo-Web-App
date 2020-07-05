@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Globalshala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="css/main.css">
+  
+  
+  
+</head>
+<body>
+{% block content %}
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="img/logo.png" alt="Global">
+    <p>Globalshala</p>
+  </a>
+  <p class="device-notification--message">Globalshala has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="con"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="img/logo.png" alt="Global">
+            <p>Globalshala</p>
+          </a>
+          <button class="header--cta cta">University Register/Login Here</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Universities Enrolled</span></li>
+            <li><span>About</span></li>
+            <li><span>Gallery</li>
+            <!-- <li><span>Talks</span></li> -->
+            <!-- <li><span>Workshops</span></li> -->
+            <li><span>Contact</span></li>
+            <li><span>Terms & conditions</span></li>
+            <li><span>University Register/Login</span></li>
+            
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Get the<br>brightest minds<br>for your<br>University</h1>
+                <button class="cta">University Register/Login here
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <img src="images/startup.png" height="450px"  width="450px" alt="Welcome" style="padding-bottom: 25px;">
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <p>Making Selection process easier for you with quality of students.</p>
+                </a>
+                <a href="#0">
+                  
+                  <p>Easy, efficient and quality services for students and Universities.</p>
+                </a>
+                <a href="#0">
+                  
+                  <p>We focus on bridging the gap between students and universities.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+              <div class="about">
+                  <div class="about--banner">
+                    <h2>Apply for<br>admission in<br>your dream<br>University</h2>
+                    <a href="/eventshome">More
+                      <span>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                          <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                        </g>
+                        </svg>
+                      </span>
+                    </a>
+                    <img src="img/about-visual.png" alt="About Us">
+                    </div>
+                 
+                </div>
+            <!-- <div class="work">
+              <h2>Upcoming Events</h2>
+              <div class="work--lockup">
+                 
+                <ul class="slider">
+                    {% for Event in Events %}
+                    
+                  <li class="slider--item slider--item-center">
+                      
+                      
+                    
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/ai.jpg" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                   
+                    
+                   
+                  </li>
+                  
+                  {% endfor %}
+                  <!-- <li class="slider--item slider--item-left">
+                      
+                      {% for Event in Events %}
+                    {% if Event.category =='5' %}
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/js2.jpg" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                   
+                    {% endif %}
+                    {% endfor %}
+                  </li>
+                  
+                  
+                  <li class="slider--item slider--item-center">
+                      {% for Event in Events %}
+                      {% if Event.category =='2' %}
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/graphic.jpg" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                  </li>
+                  <li class="slider--item slider--item-center">
+                      {% for Event in Events %}
+                      {% if Event.category =='6' %}
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/php2.jpg" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                  </li>
+                  
+                  <li class="slider--item slider--item-right">
+                      {% for Event in Events %}
+                      {% if Event.category =='4' %}
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/cybersecurity.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                  </li>
+                  <li class="slider--item slider--item-right">
+                      {% for Event in Events %}
+                      {% if Event.category =='3' %}
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/marketing1.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                  </li>
+                  <li class="slider--item slider--item-right">
+                      {% for Event in Events %}
+                      {% if Event.category =='7' %}
+                    <a href="users/login">
+                      <div class="slider--item-image">
+                        <img src="img/python1.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">{{Event.name}}</p>
+                      <p class="slider--item-description">{{Event.date}}</p>
+                      <p class="slider--item-description">{{Event.location}}</p>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                  </li>
+                 -->
+                <!-- </ul>
+               
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div> --> 
+          </li>
+          <!-- <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <p style="font-size: 20px"><b>Globalshala is a rising platform<br> for connecting students and<br>
+                        Universities by providing admission to students in various universities through our platform.<br> We focus on quality of
+                        students, universities<br> approach and authenticity of procedure.
+                    <br>
+                <br>
+            
+                Making the Selection process easier <br>We saturate the best students for you,
+                who are ready <br>to learn and work on new things.<br>Hence minimising
+                wastage of human resource and <br>save money expenditure wasted in
+                Selection process for admission</b></p>
+                <img src="img/about-visual.png" alt="About Us">
+                </div>
+             
+            </div>
+          </li> -->
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>We<br>believe in<br>passionate<br>people</h2>
+                <a href="/aboutus">More
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="img/about-visual.png" alt="About Us">
+                </div>
+             
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>Gallery</h2>
+                <a href="/galleryhome">More
+                    <span>
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                      </g>
+                      </svg>
+                    </span>
+                  </a>
+                  <img src="img/about-visual.png" alt="About Us">
+                <!-- <a href="#0">More
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="img/about-visual.png" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="#0">
+                  <h3>Winners</h3>
+                </a>
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>History</h3>
+                </a> -->
+              </div>
+            </div>
+          </li>
+          <!-- <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>Talks</h2>
+                <a href="#0">More
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="img/about-visual.png" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="#0">
+                  <h3>Winners</h3>
+                </a>
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>History</h3>
+                </a>
+              </div>
+            </div>
+          </li> -->
+          <!-- <li class="l-section section">
+            <div class="work">
+              <h2>Workshops</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="img/work-victory.jpg" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">Victory</p>
+                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="img/work-metiew-smith.jpg" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">Metiew &amp; Smith</p>
+                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="img/work-alex-nowak.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Alex Nowak</p>
+                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li> -->
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>New Delhi, India</p>
+                    <a href="mailto:contact@globalshala.com">contact@globalshala.com</a>
+                    <a href="tel:+91 9873980567">+91 9873980567</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="https://www.facebook.com/globalshala">Facebook</a></li>
+                    
+                    <li><a href="mailto:contact@globalshala.com">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banne">
+                <h2>Terms & conditions</h2>
+                <a href="/tnc">More
+                    <span>
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                      </g>
+                      </svg>
+                    </span>
+                  </a>
+                  <p style="font-size:12px;">This website is owned and operated by a team of developers participating in Glabalshala Hacakathon. Please read these terms and conditions carefully, as by accessing this site, you are agreeing to abide by all the conditions set out below. Our prototype for global shala Hacakathon expressly reserves all rights in the content and compilation of entire content on the website. The content and software on this website may be used for the purposes of private, non-commercial viewing of web pages only. Any other use, including the downloading, reproduction, copying, modification, distribution, republication, display or performance of the content of this website is strictly prohibited without the express written consent of our team.</p>
+                <!-- <a href="#0">More
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="img/about-visual.png" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="#0">
+                  <h3>Winners</h3>
+                </a>
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>History</h3>
+                </a> -->
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            
+            <div class="hire">
+              <h2>University Register/login</h2>
+              
+              <form class="work-request" action="">
+                <div class="work-request--options">
+                  <!-- <span class="options-a">
+                    <input id="opt-1" type="checkbox" value="app design">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      App Design
+                    </label>
+                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Graphic Design
+                    </label>
+                    <input id="opt-3" type="checkbox" value="motion design">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Motion Design
+                    </label>
+                  </span>
+                  <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="ux design">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      UX Design
+                    </label>
+                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Webdesign
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Marketing
+                    </label>
+                  </span>
+                </div>
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" type="text" spellcheck="false">
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="information-email">
+                    <input id="email" type="email" spellcheck="false">
+                    <label for="email">Email</label>
+                  </div> -->
+                </div>
+                <center>
+                <input class="btn btn-primary" type="button" onClick="location.href='/users/compregister'"value="University Register">
+                <br><br><br>
+                <!-- <input class="btn btn-primary" type="button" onClick="location.href='/users/login'"value="Login"> -->
+               <input class="btn btn-primary" type="button" onClick="location.href='/users/complogin'"value="University Login">
+              </center>
+              </form>
+            </div>
+              
+            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  
+  </div></div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>University Enrolled</li>
+    <li>About</li>
+    <li>Gallery</li>
+    <!-- <li>Talks</li> -->
+    <!-- <li>Workshops</li> -->
+    <li>Contact</li>
+    <li>Terms & conditions</li>
+    <li>University Register/Login</li>
+    
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="js/functions-min.js"></script>
+</body>
+{% endblock %}
+</html>
