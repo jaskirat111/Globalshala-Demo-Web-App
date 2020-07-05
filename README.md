@@ -9,5 +9,56 @@ We have a broad vision of improving a student’s career while taking care of jo
 
 # Team Name : Code UI
 
+## Local Installation
+It's easy to install and run it on your computer.
+
+### Install Nodejs in your environment -> https://nodejs.org/en/download/ 
+
+```shell
+# 1. First, clone the repo
+$ git clone https://github.com/jaskirat111/Globalshala-Demo-Web-App
+$ cd Globalshala-Demo-Web-App
+
+# 2. Install npm packages
+$ npm install
+
+# 3. Run!
+$ npm start
+```
+Open http://localhost:3000 and have fun. :smiley:
+
+## Other Requirements
+
+### 1. Go to misc-> mailer.js and update the user and pass values with your email Id and password (gmail is preferred). 
+
+const transport = nodemailer.createTransport(
+  smtpTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    auth: {
+      user: "type your gmail Id",
+      pass: "type your password",
+    },
+  })
+);
+
+### change your settings at https://www.google.com/settings/security/lesssecureapps so that your gmail account is no longer protected by modern security standards. In addition to enabling Allow less secure apps, you might also need to navigate to https://accounts.google.com/DisplayUnlockCaptcha and click continue.
+
+### 2. Go to routes -> user.js and update the apikey and apisecret values for Nexmo SMS API. Apply for a free trial for nexmo SMS service in https://developer.nexmo.com/ and copy the apikey and apisecret into the code.
+
+const nexmo = new Nexmo({
+  apiKey: "XXXXX",
+  apiSecret: "XXXXXXX",
+});
+
+### 3. Apply for Instamojo payment gateway services in https://www.instamojo.com/ (Bank Details are required for free trial) and copy the instamojo testing keys in routes-> bid.js
+
+Insta.setKeys('XXXXXXXXXXXXXXXXXXXXX', 'XXXXXXXXXXXXXXX');
+
+
+
+
+
+
 
 
