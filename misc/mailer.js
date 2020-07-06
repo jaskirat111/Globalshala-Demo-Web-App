@@ -20,8 +20,8 @@ const transport = nodemailer.createTransport(
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-      user: "jkrt.ngh69@gmail.com",
-      pass: "9999888219",
+      user: "GlobalShala@gmail.com",
+      pass: "Qwerty123456@",
     },
   })
 );
