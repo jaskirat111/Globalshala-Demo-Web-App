@@ -86,22 +86,55 @@ h2{ color: aliceblue;
                       <!-- </ul>   -->
                     <!-- </div> -->
                     <!-- <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/"> -->
-                    <div id="captioned-gallery">
-                        
+                   
+			<div id="captioned-gallery">
+                         
                       <figure class="slider">
                           {% for image in Images %}
+			{% if image.category=="Artificial Intelligence/ML" %}
                         <figure>
                           <img src="{{image.imagesrc}}" alt>
                           <figcaption>{{image.category}}</figcaption>
                         </figure>
-                        {% endfor %}
+			{% endif %}
+			{% endfor %}
+ 			{% for image in Images %}
+			{% if image.category=="Graphic Design" %}
                         <figure>
-                          <img src="img/Artificial-intelligence.jpg" alt>
-                          <figcaption>Artificial Intelligence </figcaption>
+                          <img src="{{image.imagesrc}}" alt>
+                          <figcaption>{{image.category}}</figcaption>
                         </figure>
+			{% endif %}
+			{% endfor %}
+			{% for image in Images %}
+			{% if image.category=="Marketing" %}
+                        <figure>
+                          <img src="{{image.imagesrc}}" alt>
+                          <figcaption>{{image.category}}</figcaption>
+                        </figure>
+			{% endif %}
+			{% endfor %}
+			{% for image in Images %}
+			{% if image.category=="Cybersecurity" %}
+                        <figure>
+                          <img src="{{image.imagesrc}}" alt>
+                          <figcaption>{{image.category}}</figcaption>
+                        </figure>
+			{% endif %}
+			{% endfor %}
+
+			{% for image in Images %}
+			{% if image.category=="WebDevelopment-JavaScript" %}
+                        <figure>
+                          <img src="{{image.imagesrc}}" alt>
+                          <figcaption>{{image.category}}</figcaption>
+                        </figure>
+			{% endif %}
+			{% endfor %}
                       </figure>
-                     
+                    
                     </div>
+   
                   <div class="row wow fadeIn">
                   {% for Event in Events %}
                   
