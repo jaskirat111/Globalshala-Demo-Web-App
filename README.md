@@ -44,7 +44,7 @@ const transport = nodemailer.createTransport(
 ```
 #### 2. change your settings at https://www.google.com/settings/security/lesssecureapps so that your gmail account is no longer protected by modern security standards. In addition to enabling Allow less secure apps, you might also need to navigate to https://accounts.google.com/DisplayUnlockCaptcha and click continue.
 
-#### 3. Go to routes -> user.js and update the apikey and apisecret values for Nexmo SMS API. Apply for a free trial for nexmo SMS service in https://developer.nexmo.com/ and copy the apikey and apisecret into the code.
+#### 3. Go to routes -> user.js and update the apikey and apisecret values for Nexmo SMS API. Apply for a free trial ( 2 Dollar quota) for nexmo SMS service in https://developer.nexmo.com/ and copy the apikey and apisecret into the code.
 
 ```shell
 const nexmo = new Nexmo({
