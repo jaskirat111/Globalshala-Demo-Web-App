@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Globalshala</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Globalshala">
-  <meta name="keywords" content="Internship, Web Development, Ethical Hacking, BloockChain, Starttups, Corporates">
-  <meta name="author" content="Bucky Maler">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <head>
+    <title>Globalshala</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="HTML5 website template" />
+    <meta name="keywords" content="global, template, html, sass, jquery" />
+    <meta name="author" content="Bucky Maler" />
+    <link rel="stylesheet" href="../css/main1.css" />
 
-<!-- <script>
+    <link
+      rel="stylesheet"
+      href="../css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link
+      href="../vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="../vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+      href="../vendor/select2/select2.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="../vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="../css/form.css" rel="stylesheet" media="all" />
+    <link href="../css/form.scss" rel="stylesheet" media="all" />
+    <!-- <script>
 $('#myDiv').change(function() {
   var values = [];
   {
@@ -25,83 +59,9 @@ $('#myDiv').change(function() {
   }
 });
 </script> -->
-<!-- CSS only -->
+  </head>
 
-<!-- JS, Popper.js, and jQuery -->
-
-</head>
-<body>
-  {% block content %}
-
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="#0">
-    <img src="/img/logo.png" alt="Globalshala">
-    <p>Globalshala</p>
-  </a>
-</div>
-
-
-  
-    <!-- <div id="viewport" class="l-viewport"> -->
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="#0">
-            <img src="/img/logo.png" alt="Globalshala">
-            <p>Globalshala</p>
-          </a>
-          
-        </header>
-        <div class="container">
-         
-              <center>
-              <h2>Admin registration</h2>
-              
-              <form class="work-request" method="post" action="/users/adminregister">
-                
-                <div class="work-request--information">
-                  <div class="information-name">
-                       <label class="form-control" for="name">Name</label>
-                      <input class="form-control" required id="name" type="text" spellcheck="false" name="name">
-                    
-                  </div>
-                  <br/>
-                  <div class="information-name">
-                    <label class="form-control" for="email">Email</label>
-                      <input class="form-control" required id="email" type="email" spellcheck="false" name="email">
-                    
-                  </div>
-                  <br/>
-                  <div class="information-name">
-                    <label class="form-control">Phone Number</label>
-                    <input class="form-control" type="text" name="phone" required placeholder="Add +91 infront of your no.">
-                    
-                </div>
-                <br/>
-                  <div class="information-name">
-                      <label class="form-control" for="name">Password</label>
-                      <input class="form-control" required id="name" type="text" spellcheck="false" name="password">
-                      
-                  </div>
-                  <br/>
-                  <div class="information-name">
-                      <label class="form-control" for="name">Confirm Password</label>
-                      <input class="form-control" required id="name" type="text" spellcheck="false" name="password2">
-                      
-                  </div>
-                </div><br>
-                <input type="hidden" value="true" name="isAdmin">
-                <input type="hidden" value="admin" name="type">
-               <center> <input type="submit" value="Submit"></center>
-               <br/>
-               <center>
-                   <a href="../../">Back to Home</a>
-               </center> 
-            </form>
-          
-          </div>
-</body>
-<!-- <script>
+  <!-- <script>
   $('input[type="checkbox"]').on('change', function(e){
          if($(this).prop('checked'))
          {
@@ -111,11 +71,179 @@ $('#myDiv').change(function() {
          }
  });
   </script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="/js/functions-min.js"></script>
-</body>
-{% endblock %}
+  <body style="background-color: black;">
+    {% block content %}
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+          <div class="card-body">
+            <center><h2 class="title">Admin Registration Form</h2></center>
+            <form
+              method="post"
+              action="/users/adminregister"
+              class="work-request"
+            >
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Employee Name</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="text"
+                      spellcheck="false"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Email</label>
+                    <input
+                      required
+                      id="email"
+                      required
+                      class="input--style-4"
+                      type="email"
+                      spellcheck="false"
+                      name="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Phone</label>
+                    <input
+                      type="text"
+                      required
+                      class="input--style-4"
+                      name="phone"
+                      required
+		       placeholder="Add +91 infront of your No."
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Password</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="password"
+                      spellcheck="false"
+                      name="password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Confirm Password</label>
+                    <input
+                      required
+                      id="name"
+                      required
+                      class="input--style-4"
+                      type="password"
+                      spellcheck="false"
+                      name="password2"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row row-space">
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i2" type="checkbox" checked>
+                              <label for="i2">Item 1</label>
+                            </div>
+                            <div class="md-checkbox">
+                              <input id="i1" type="checkbox">
+                              <label for="i1">Item 2</label>
+                            </div>
+                            
+                            </div> -->
+
+              <!-- <div class="input-group">
+                              <label class="label">Subject</label>
+                              <div class="rs-select2 js-select-simple select--no-search">
+                                  <select name="subject">
+                                      <option disabled="disabled" selected="selected">Choose option</option>
+                                      <option>Subject 1</option>
+                                      <option>Subject 2</option>
+                                      <option>Subject 3</option>
+                                  </select>
+                                  <div class="select-dropdown"></div>
+                              </div>
+                          </div> -->
+              <input type="hidden" value="true" name="isAdmin" />
+              <input type="hidden" value="admin" name="type" />
+              <div class="p-t-15">
+                <center>
+                  <button class="btn btn--radius-2 btn--blue" type="submit">
+                    Submit
+                  </button>
+                </center>
+              </div>
+            </form>
+            <br />
+            <div>
+<center>
+              Already have an account
+              <a href="../../users/adminlogin">Login here</a>
+</center>
+            </div>
+<br />
+		<div>
+<center>
+              Go Back to home <a href="../../">Click here</a>
+</center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../vendor/select2/select2.min.js"></script>
+    <script src="../vendor/datepicker/moment.min.js"></script>
+    <script src="../vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../js/global.js"></script>
+  </body>
+  {% endblock %}
 </html>
