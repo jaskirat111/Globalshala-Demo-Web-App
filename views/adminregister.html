@@ -25,6 +25,10 @@ $('#myDiv').change(function() {
   }
 });
 </script> -->
+<!-- CSS only -->
+
+<!-- JS, Popper.js, and jQuery -->
+
 </head>
 <body>
   {% block content %}
@@ -57,31 +61,42 @@ $('#myDiv').change(function() {
                 
                 <div class="work-request--information">
                   <div class="information-name">
-                      
-                      <input required id="name" type="text" spellcheck="false" name="name">
-                      <center><label for="name">Name</label></center>
+                       <label class="form-control" for="name">Name</label>
+                      <input class="form-control" required id="name" type="text" spellcheck="false" name="name">
+                    
                   </div>
+                  <br/>
                   <div class="information-name">
-                      <input required id="email" type="email" spellcheck="false" name="email">
-                      <center><label for="email">Email</label></center>
+                    <label class="form-control" for="email">Email</label>
+                      <input class="form-control" required id="email" type="email" spellcheck="false" name="email">
+                    
                   </div>
+                  <br/>
                   <div class="information-name">
-                    <input type="text" name="phone" required>
-                    <center><label>Phone Number</label></center>
+                    <label class="form-control">Phone Number</label>
+                    <input class="form-control" type="text" name="phone" required placeholder="Add +91 infront of your no.">
+                    
                 </div>
+                <br/>
                   <div class="information-name">
-                      <input required id="name" type="password" spellcheck="false" name="password">
-                      <center><label for="name">Password</label></center>
+                      <label class="form-control" for="name">Password</label>
+                      <input class="form-control" required id="name" type="text" spellcheck="false" name="password">
+                      
                   </div>
+                  <br/>
                   <div class="information-name">
-                      <input required id="name" type="password" spellcheck="false" name="password2">
-                      <center><label for="name">Confirm Password</label></center>
+                      <label class="form-control" for="name">Confirm Password</label>
+                      <input class="form-control" required id="name" type="text" spellcheck="false" name="password2">
+                      
                   </div>
                 </div><br>
                 <input type="hidden" value="true" name="isAdmin">
                 <input type="hidden" value="admin" name="type">
                <center> <input type="submit" value="Submit"></center>
-               
+               <br/>
+               <center>
+                   <a href="../../">Back to Home</a>
+               </center> 
             </form>
           
           </div>
@@ -104,4 +119,3 @@ $('#myDiv').change(function() {
 </body>
 {% endblock %}
 </html>
-
