@@ -27,7 +27,7 @@ $ npm start
 ```
 Open http://localhost:3000 and have fun. :smiley:
 
-## Other Requirements
+## Other Requirements (Theses requirements are already fulfilled in the code):
 
 #### 1. Go to misc-> mailer.js and routes-> forgots.js . Update the user and pass values with your email Id and password (gmail is preferred). 
 ```shell
