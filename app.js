@@ -35,7 +35,7 @@ app.engine("html", swig.renderFile);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "html");
 //mongoose.connect(config.database);
-mongoose.connect(process.env.MONGODB_URI || config.database);
+mongoose.connect(process.env.MONGODB_URI);
 let db = mongoose.connection;
 
 // Check connection

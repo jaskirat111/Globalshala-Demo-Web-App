@@ -55,8 +55,8 @@ router.post("/forgot", function (req, res, next) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "jkrt.ngh69@gmail.com",
-            pass: "9999888219",
+            user: "GlobalShala@gmail.com",
+            pass: "Qwerty123456@",
           },
           // service: 'Mailgun',
           // auth: {
@@ -181,7 +181,7 @@ router.post("/reset/:token", function (req, res) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "globalshala@gmail.com",
+            user: "GlobalShala@gmail.com",
             pass: "Qwerty123456@",
           },
           // service: 'Mailgun',
@@ -251,7 +251,7 @@ router.post("/forgotcomp", function (req, res, next) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "globalshala@gmail.com",
+            user: "GlobalShala@gmail.com",
             pass: "Qwerty123456@",
           },
           // service: "Mailgun",
@@ -368,7 +368,7 @@ router.post("/resetcomp/:token", function (req, res) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "globalshala@gmail.com",
+            user: "GlobalShala@gmail.com",
             pass: "Qwerty123456@",
           },
           // service: 'Mailgun',
@@ -386,7 +386,7 @@ router.post("/resetcomp/:token", function (req, res) {
         });
         var mailOptions = {
           to: user.email,
-          from: "globalshala@gmail.com",
+          from: "GlobalShala@gmail.com",
           subject: "Your password has been changed",
           text:
             "Hello,\n\n" +
