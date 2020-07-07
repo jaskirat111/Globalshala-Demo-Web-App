@@ -29,7 +29,7 @@ Open http://localhost:3000 and have fun. :smiley:
 
 ## Other Requirements
 
-#### 1. Go to misc-> mailer.js and update the user and pass values with your email Id and password (gmail is preferred). 
+#### 1. Go to misc-> mailer.js and routes-> forgots.js . Update the user and pass values with your email Id and password (gmail is preferred). 
 ```shell
 const transport = nodemailer.createTransport(
   smtpTransport({
