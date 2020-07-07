@@ -311,11 +311,11 @@ router.post("/register", function (req, res) {
 				 <br/><br/>
 				 Please verify your email by clicking the following link:
 					<br/>
-				 <a href="https://global-shala.herokuapp.com/users/verifyemail/${secretToken}">https://global-shala.herokuapp.com/users/verifyemail/${secretToken}</a>
+				 <a href="http://127.0.0.1:3000/users/verifyemail/${secretToken}">https://global-shala.herokuapp.com/users/verifyemail/${secretToken}</a>
 				 <br/><br/>
 				 Have a pleasant day.`;
                     mailer.sendEmail(
-                      "jkrt.ngh69@gmail.com",
+                      "globalshala@gmail.com",
                       email,
                       "Please verify your email!",
                       html
@@ -912,11 +912,11 @@ router.post("/compregister", function (req, res) {
 										 Please verify your email by clicking the following link:
 										 
 									
-										 <a href="https://global-shala.herokuapp.com/users/verifyemail1/${secretToken}">https://global-shala.herokuapp.com/users/verifyemail1/${secretToken}</a>
+										 <a href="http://127.0.0.1:3000/users/verifyemail1/${secretToken}">http://127.0.0.1:3000/users/verifyemail1/${secretToken}</a>
 										 <br/><br/>
 										 Have a pleasant day.`;
             mailer.sendEmail(
-              "jkrt.ngh69@gmail.com",
+              "globalshala@gmail.com",
               email,
               "Please verify your email!",
               html

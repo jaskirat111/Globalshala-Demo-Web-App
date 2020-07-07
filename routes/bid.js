@@ -60,7 +60,7 @@ router.post("/pay", (req, res) => {
   data.send_email = false;
   data.user_id = req.user.__id;
 
-  data.redirect_url = `https://global-shala.herokuapp.com/bid/callback?user_id=${req.user.id}`;
+  data.redirect_url = `http://127.0.0.1:3000/bid/callback?user_id=${req.user.id}`;
   //sdata.setRedirectUrl(redirectUrl);
   //data.webhook= '/webhook/';
   data.send_sms = false;
@@ -160,7 +160,7 @@ router.post("/payh", (req, res) => {
   data.send_email = false;
   data.user_id = req.user.__id;
 
-  data.redirect_url = `https://global-shala.herokuapp.com/bid/callbacks?user_id=${req.user.id}`;
+  data.redirect_url = `http://127.0.0.1:3000/bid/callbacks?user_id=${req.user.id}`;
   //sdata.setRedirectUrl(redirectUrl);
   //data.webhook= '/webhook/';
   data.send_sms = false;
@@ -291,7 +291,7 @@ router.post("/event/:id", ensureAuthenticated, (req, res) => {
           data.send_email = true;
           //data.__id = req.body.id;
 
-          data.redirect_url = `https://global-shala.herokuapp.com/bid/cb/:id?user_id=${req.user.id}`;
+          data.redirect_url = `http://127.0.0.1:3000/bid/cb/:id?user_id=${req.user.id}`;
           //sdata.setRedirectUrl(redirectUrl);
           //data.webhook= '/webhook/';
           data.send_sms = true;
@@ -602,7 +602,7 @@ router.post("/projectintermediate/:id", (req, res) => {
         data.send_email = true;
         data.__id = req.user.id;
 
-        data.redirect_url = `https://global-shala.herokuapp.com/bid/cbintermediate/:id?user_id=${req.user.id}`;
+        data.redirect_url = `http://127.0.0.1:3000/bid/cbintermediate/:id?user_id=${req.user.id}`;
         //sdata.setRedirectUrl(redirectUrl);
         //data.webhook= '/webhook/';
         data.send_sms = true;
@@ -788,7 +788,7 @@ router.post("/projectadvance/:id", (req, res) => {
         data.send_email = true;
         data.__id = req.user.id;
 
-        data.redirect_url = `https://global-shala.herokuapp.com/bid/cbadvance/:id?user_id=${req.user.id}`;
+        data.redirect_url = `http://127.0.0.1:3000/bid/cbadvance/:id?user_id=${req.user.id}`;
         //sdata.setRedirectUrl(redirectUrl);
         //data.webhook= '/webhook/';
         data.send_sms = true;
@@ -973,7 +973,7 @@ router.post("/projecthot/:id", (req, res) => {
         data.send_email = true;
         data.__id = req.user.id;
 
-        data.redirect_url = `https://global-shala.herokuapp.com/bid/cbhot/:id?user_id=${req.user.id}`;
+        data.redirect_url = `http://127.0.0.1:3000/bid/cbhot/:id?user_id=${req.user.id}`;
         //sdata.setRedirectUrl(redirectUrl);
         //data.webhook= '/webhook/';
         data.send_sms = true;

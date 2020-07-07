@@ -77,14 +77,14 @@ router.post("/forgot", function (req, res, next) {
         });
         var mailOptions = {
           to: user.email,
-          from: "jkrt.ngh69@gmail.com",
+          from: "globalshala@gmail.com",
           subject: "Global Shala Password Reset",
           // from: 'sapna@cybernauttech.com',
           // subject: 'Intern Nexus Password Reset',
           text:
             "You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n" +
             "Please click on the following link, or paste this into your browser to complete the process:\n\n" +
-            "https://global-shala.herokuapp.com/forgots/reset/" +
+            "http://127.0.0.1:3000/forgots/reset/" +
             token +
             "\n\n" +
             "If you did not request this, please ignore this email and your password will remain unchanged.\n",
@@ -181,8 +181,8 @@ router.post("/reset/:token", function (req, res) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "jkrt.ngh69@gmail.com",
-            pass: "9999888219",
+            user: "globalshala@gmail.com",
+            pass: "Qwerty123456@",
           },
           // service: 'Mailgun',
           // auth: {
@@ -199,7 +199,7 @@ router.post("/reset/:token", function (req, res) {
         });
         var mailOptions = {
           to: user.email,
-          from: "jkrt.ngh69@gmail.com",
+          from: "globalshala@gmail.com",
           subject: "Your password has been changed",
           text:
             "Hello,\n\n" +
@@ -251,8 +251,8 @@ router.post("/forgotcomp", function (req, res, next) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "jkrt.ngh69@gmail.com",
-            pass: "9999888219",
+            user: "globalshala@gmail.com",
+            pass: "Qwerty123456@",
           },
           // service: "Mailgun",
           // auth: {
@@ -266,14 +266,13 @@ router.post("/forgotcomp", function (req, res, next) {
         });
         var mailOptions = {
           to: user.email,
-          from: "jkrt.ngh69@gmail.com",
+          from: "globalshala@gmail.com",
           subject: "Global Shala Password Reset",
-          // from: 'sapna@cybernauttech.com',
-          // subject: 'Intern Nexus Password Reset',
+          
           text:
             "You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n" +
             "Please click on the following link, or paste this into your browser to complete the process:\n\n" +
-            "https://global-shala.herokuapp.com/forgots/resetcomp/" +
+            "http://127.0.0.1:3000/forgots/resetcomp/" +
             token +
             "\n\n" +
             "If you did not request this, please ignore this email and your password will remain unchanged.\n",
@@ -369,8 +368,8 @@ router.post("/resetcomp/:token", function (req, res) {
           service: "gmail",
           host: "smtp.gmail.com",
           auth: {
-            user: "jkrt.ngh69@gmail.com",
-            pass: "9999888219",
+            user: "globalshala@gmail.com",
+            pass: "Qwerty123456@",
           },
           // service: 'Mailgun',
           // auth: {
@@ -387,7 +386,7 @@ router.post("/resetcomp/:token", function (req, res) {
         });
         var mailOptions = {
           to: user.email,
-          from: "jkrt.ngh69@gmail.com",
+          from: "globalshala@gmail.com",
           subject: "Your password has been changed",
           text:
             "Hello,\n\n" +
