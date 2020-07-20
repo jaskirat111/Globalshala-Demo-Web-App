@@ -293,7 +293,7 @@
                               {% endif %}
                             </td>
                             <td>
-                              <button id="button" class="btn btn-default">
+                              <button id="button" class="btn btn-primary">
                                 <a
                                   href="projectbriefselcted/{{internnexusproject.id}}"
                                   >Project Brief</a
@@ -301,7 +301,7 @@
                               </button>
                             </td>
                             <td>
-                              <button id="button" class="btn btn-default">
+                              <button id="button" class="btn btn-primary">
                                 <a href="{{internnexusproject.pdflink}}"
                                   >Project Pdf</a
                                 >
@@ -310,7 +310,7 @@
                             <td>
                               {% if internnexusproject.guideverify=='true' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="projectstatusverified/{{internnexusproject.id}}"
                                     >Verified</a
@@ -320,7 +320,7 @@
                               {% endif %} {% if
                               internnexusproject.guideverify=='false' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="projectstatusnotverified/{{internnexusproject.id}}"
                                     >Not Verified</a
@@ -331,7 +331,7 @@
                             </td>
                             <td>
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="projectquery/{{internnexusproject.id}}"
                                     >Query</a
@@ -341,7 +341,7 @@
                             </td>
                             <td>
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="projectquerylist/{{internnexusproject.id}}"
                                     >Query List</a
@@ -353,7 +353,7 @@
                             <td>
                               {% if internnexusproject.submitproject =='true' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="submitprojectdone/{{internnexusproject.id}}"
                                     >Submitted
@@ -363,7 +363,7 @@
                               {% endif %} {% if internnexusproject.submitproject
                               =='false' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="submitproject/{{internnexusproject.id}}"
                                     >Submit</a
@@ -376,7 +376,7 @@
                               {% if internnexusproject.submitprojectverified
                               =='true' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="submitprojectverified/{{internnexusproject.id}}"
                                   >
@@ -388,7 +388,7 @@
                               internnexusproject.submitprojectverified =='false'
                               %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="submitprojectnotverified/{{internnexusproject.id}}"
                                   >
@@ -401,7 +401,7 @@
                             <td>
                               {% if internnexusproject.finalproject =='true' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="finalprojectsubmitted/{{internnexusproject.id}}"
                                     >Project Review</a
@@ -411,7 +411,7 @@
                               {% endif %} {% if internnexusproject.finalproject
                               =='false' %}
                               <center>
-                                <button id="button" class="btn btn-default">
+                                <button id="button" class="btn btn-primary">
                                   <a
                                     href="finalproject/{{internnexusproject.id}}"
                                     >Submit</a

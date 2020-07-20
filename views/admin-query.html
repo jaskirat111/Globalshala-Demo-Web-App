@@ -251,10 +251,10 @@
                         </td>
                         <td>
                             {% if query.reviewcount==0 %}
-                        <button id= "button" class="btn btn-default"><a href="admin-query-answer/{{query.id}}">Answer</a></button>
+                        <button id= "button" class="btn btn-primary"><a href="admin-query-answer/{{query.id}}">Not Answered</a></button>
                             {% endif %}
                             {% if query.reviewcount ==1 %}
-                            <button id= "button" class="btn btn-default"><a href="#">Answer</a></button>
+                            <button id= "button" class="btn btn-primary"><a href="#">Answered</a></button>
                             {% endif %}
                         </td>
                         

@@ -20,6 +20,7 @@
 </head>
 
 <body class="dark-edition">
+  {% block content %}
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="../../assets/img/sidebar-2.jpg">
       <!--
@@ -32,10 +33,10 @@
           Globalshala
         </a>
       </div>
-     <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item ">
-            <a class="nav-link" href="dashboard">
+            <a class="nav-link" href="../dashboard">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -45,7 +46,7 @@
 
           
           <li class="nav-item ">
-            <a class="nav-link" href="user/{{user.id}}">
+            <a class="nav-link" href="../user/{{user.id}}">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
@@ -53,7 +54,7 @@
           {% endif %}
           {% endfor %}
           <li class="nav-item ">
-            <a class="nav-link" href="Events">
+            <a class="nav-link" href="../Events">
               <i class="material-icons">content_paste</i>
               <p>Events</p>
             </a>
@@ -78,44 +79,44 @@
           </li> -->
 
           <li class="nav-item ">
-              <a class="nav-link" href="resumesoon">
+              <a class="nav-link" href="../resumesoon">
                 <i class="material-icons">assignment_ind</i>
                 <p>Resume</p>
               </a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="query">
+            <li class="nav-item ">
+              <a class="nav-link" href="../query">
                 <i class="material-icons">question_answer</i>
                 <p>Query</p>
               </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="forum">
+                <a class="nav-link" href="../forum">
                   <i class="material-icons">list</i>
                   <p>Forum</p>
                 </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" href="projectlist">
+                  <a class="nav-link" href="../projectlist">
                     <i class="material-icons">event_note</i>
                     <p>Project List</p>
                   </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link active" href="projectselected">
+                <a class="nav-link active" href="../projectselected">
                   <i class="material-icons">playlist_add_check </i>
                   <p>Project Selected</p>
                 </a>
         </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="suggestion">
+            <a class="nav-link" href="../suggestion">
                 <i class="material-icons">rate_review</i>
               <p>Suggestion</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="report">
+            <a class="nav-link" href="../report">
                 <i class="material-icons">report</i>
               <p>Report</p>
             </a>
@@ -140,6 +141,7 @@
             </li> -->
         </ul>
       </div>
+    </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
@@ -167,11 +169,11 @@
               </li> -->
 
               <!-- <li class="nav-item ">
-                <a class="nav-link" href="../users/logout">
+                <a class="nav-link" href="/logout">
                 <i class="material-icons">logout</i> 
                 <!-- <p>Logout</p> -->
                 </a>
-              </li> 
+              </li>
             <!-- </ul> -->
           </div>
         </div>
@@ -190,20 +192,38 @@
                     {% for projectquery in Projectquery %}
                     {% if projectquery.id == id %}
                   <form action="" method="POST">
+                   
                     <!-- <div class="form-group">
                       <label class="bmd-label-floating" for="name">Name</label>
                       <input class="form-control" id="name" name="name" type="text" spellcheck="false">
     
                     </div> -->
-                    <div class="form-group">
-                            <label class="bmd-label-floating">Query</label>
-                            <span class="form-control">{{projectquery.name}}</span>
+                    <!-- <div class="form-group"> -->
+                        <!-- <label class="bmd-label-floating" for="name">Please Type Your Question Here</label> -->
+                        <!-- <input class="form-control" id="name" name="name" type="text" spellcheck="false"> -->
+                        <!-- <textarea class="form-control" name="question" id="name" cols="30" rows="10"></textarea> -->
+                      <!-- </div> -->
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                              <label class="bmd-label-floating">Query</label>
+                              <span class="form-control">{{projectquery.name}}</span>
                           </div>
-                        <div class="form-group">
-                                <label class="bmd-label-floating">Answer of Your Query</label>
-                                <span class="form-control">{{projectquery.answer}}</span>
                         </div>
-                     
+                      </div>  
+                      <div class="row">
+                          <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Answer of Your Query</label>
+                          <span class="form-control">{{projectquery.answer}}</span>
+                        </div>
+                          </div>
+                       </div>   
+                      <!-- <div class="form-group">
+                        <label class="bmd-label-floating" for="name">Please Type Query Answer Here</label>
+                        <input class="form-control" id="name" name="name" type="text" spellcheck="false"> -->
+                        <!-- <textarea class="form-control" name="answer" id="name" cols="30" rows="10" value="{{query.answer}}"></textarea> -->
+                      <!-- </div>  -->
                     <!-- <div class="form-group">
                         <label for="category"></label>
                         <select id="category" class="btn btn-primary dropdown-toggle" name="category" data-toggle="dropdown">
@@ -218,11 +238,12 @@
                         </select>
                     </div> -->
                     
-                    <button class="btn btn-primary pull-right"><a href="../projectquerylist">Back to Query Section</a></button>
+                   <button class="btn btn-primary pull-center"><a href="../projectquerylist/{{projectquery.internnexusprojectid}}">Back to Query Section</a></button>
                     <div class="clearfix"></div>
+                   
                   </form>
                   {% endif %}
-                  {% endfor %}
+                    {% endfor %}
                 </div>
               </div>
             </div>
@@ -419,5 +440,5 @@
     });
   </script>
 </body>
-
+{% endblock %}
 </html>

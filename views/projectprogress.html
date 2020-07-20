@@ -129,7 +129,7 @@
             </a>
           </li>
           <li class="nav-item ">
-              <a class="nav-link" href="../../logout">
+              <a class="nav-link" href="../../users/logout">
                 <i class="material-icons">Logout</i>
                 <p>Logout</p>
               </a>
@@ -177,8 +177,8 @@
 
         <main>
         <div class="container-fluid">
-          <h1 style="color:white;">The Answer Of Your Query - {{projectquery.name}} Is In Progress</h1>
-          <button class="btn btn-default"><a href="../projectquerylist"> Back to Project Query Section</a></button>
+          <h1 style="color:white;">The Answer Of Your Query - "{{projectquery.name}}" Is In Progress</h1>
+          <center><button class="btn btn-default"><a href="../projectquerylist/{{projectquery.internnexusprojectid}}"> Back to Project Query Section</a></button></center>
         </div>
       </main>
         <script type="text/javascript" src="../../assets1/js/jquery-3.3.1.min.js"></script>

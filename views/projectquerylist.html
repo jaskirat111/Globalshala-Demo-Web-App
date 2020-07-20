@@ -93,7 +93,7 @@
                 <p>Resume</p>
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="../query">
                 <i class="material-icons">question_answer</i>
                 <p>Query</p>
@@ -112,7 +112,7 @@
                   </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link active" href="../projectselected">
+                <a class="nav-link" href="../projectselected">
                   <i class="material-icons">playlist_add_check </i>
                   <p>Project Selected</p>
                 </a>
@@ -244,10 +244,10 @@
                              
                               <td>
                                 {% if projectquery.querycount > projectquery.reviewcount %}
-                                  <button id= "button" class="btn btn-default"><a href="../projectprogress/{{projectquery.id}}">View Your Answer</a></button>
+                                  <button id= "button" class="btn btn-primary"><a href="../projectprogress/{{projectquery.id}}">View Your Answer</a></button>
                                 {% endif %}
                                 {% if projectquery.querycount == projectquery.reviewcount %}
-                                  <button id= "button" class="btn btn-default"><a href="../projectanswer/{{projectquery.id}}">View Your Answer</a></button>
+                                  <button id= "button" class="btn btn-primary"><a href="../projectanswer/{{projectquery.id}}">View Your Answer</a></button>
 
                                 {% endif %}
                               </td>
@@ -265,7 +265,14 @@
                   </div>
                 </div>
           </div>
+         
         </div>
+        <main>
+          <div class="container-fluid">
+            
+           <center> <button class="btn btn-primary"><a href="../projectselected"> Back to Project Selected Section</a></button></center>
+          </div>
+        </main>
       </div>
      
       <script>

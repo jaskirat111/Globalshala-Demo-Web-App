@@ -298,7 +298,7 @@ Globalshala  </title>
         <div class="content">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="card">
                     <div class="card-header card-header-primary">
                       <h4 class="card-title">Request Student</h4>
@@ -566,7 +566,7 @@ Globalshala  </title>
                                 </td> -->
                                 <td>
                                  
-                                    <button id= "button" class="btn btn-default"><a href="company-update-intern/{{reqintern.id}}">Update</a></button>
+                                    <button id= "button" class="btn btn-primary"><a href="company-update-intern/{{reqintern.id}}">Update</a></button>
                                  
                                 </td>
                                 <!-- <td>
@@ -582,29 +582,29 @@ Globalshala  </title>
                               </td> -->
                               <td>
                                 {% if reqintern.status =='pending' %}
-                                <button id= "button" class="btn btn-default"><a href="pending">Pending</a></button>
+                                <button id= "button" class="btn btn-primary"><a href="pending">Pending</a></button>
                                 {% endif %}
                                 {% if reqintern.status == 'confirm' %}
-                                <button id= "button" class="btn btn-default"><a href="confirm">Confirm</a></button>
+                                <button id= "button" class="btn btn-primary"><a href="confirm">Confirm</a></button>
 
                                 {% endif %}
                                 {% if reqintern.status == 'denied' %}
-                                <button id= "button" class="btn btn-default"><a href="denied">Denied</a></button>
+                                <button id= "button" class="btn btn-primary"><a href="denied">Denied</a></button>
 
                                 {% endif %}
                               </td>
                               <td>
                                  
-                                <button id= "button" class="btn btn-default"><a href="moreintern/{{reqintern.id}}">More</a></button>
+                                <button id= "button" class="btn btn-primary"><a href="moreintern/{{reqintern.id}}">More</a></button>
                              
                              
                             </td>
                               <td>
                                 {% if reqintern.closequery == 'false' %}
-                                <button id= "button" class="btn btn-default"><a href="closeyourquery/{{reqintern.id}}">Close Query</a></button>
+                                <button id= "button" class="btn btn-primary"><a href="closeyourquery/{{reqintern.id}}">Close Query</a></button>
                                 {% endif %}
                                 {% if reqintern.closequery == 'true' %}
-                                <button id= "button" class="btn btn-default"><a href="close-query-in-progress">Close Query in progress</a></button>
+                                <button id= "button" class="btn btn-primary"><a href="close-query-in-progress">Close Query in progress</a></button>
                                 {% endif %}
                               </td>
                               </tr>

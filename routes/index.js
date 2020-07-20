@@ -523,23 +523,23 @@ router.get("/adminfinalprojectsubmitted/:id", isAdmin, function (req, res) {
 });
 
 router.get("/admin-projectquery/:id", isAdmin, function (req, res) {
-  var query1 = { _id: req.params.id };
+  var query = { _id: req.params.id };
 
-  Internnexusproject.findOne(query1, function (err, internnexusproject) {
-    var query = { internnexusprojectid: req.params.id };
+  Internnexusproject.findOne(query, function (err, internnexusproject) {
 
-    Projectquery.findOne(query, function (err, projectquery) {
+    Projectquery.find(function (err, projectquery) {
       res.render("admin-projectquery", {
         title: "Project Queries",
         Projectquery: projectquery,
-        username: internnexusproject.username,
+	internnexusprojectid: req.params.id
       });
     });
   });
 });
+
 router.post("/admin-project-query-answer/:id", isAdmin, function (req, res) {
   var reviewcount = 1;
-  // var id =req.params.id;
+  
   var query = { _id: req.params.id };
   // var id= req.params.id;
 
@@ -549,19 +549,20 @@ router.post("/admin-project-query-answer/:id", isAdmin, function (req, res) {
     err,
     projectquery
   ) {
-    console.log(queries);
+    console.log(projectquery);
     res.render("adminreviewprojectsuccess", {
       title: "Query Answered Successfully",
       projectquery: projectquery,
     });
   });
 });
+
 router.get("/admin-project-query-answer/:id", isAdmin, function (req, res) {
   var id = req.params.id;
   Projectquery.find(function (err, projectquery) {
     res.render("admin-project-query-answer", {
       title: "Query Answer",
-      Query: query,
+      Projectquery: projectquery,
       id: id,
     });
   });

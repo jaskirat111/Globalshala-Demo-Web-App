@@ -36,8 +36,8 @@ function ensureAuthenticated(req, res, next) {
 
 router.post("/pay", (req, res) => {
   Insta.setKeys(
-    "test_ac6c027a59cd53e60732eff67fe",
-    "test_356206b1bea68d2bf3eedb9261f"
+    "test_81614827b018fd53d26215682fe",
+    "test_981fd0ef453b37dc39285bc7ec9"
   );
 
   var data = new Insta.PaymentData();
@@ -136,8 +136,8 @@ router.get("/callback/", (req, res) => {
 
 router.post("/payh", (req, res) => {
   Insta.setKeys(
-    "test_ac6c027a59cd53e60732eff67fe",
-    "test_356206b1bea68d2bf3eedb9261f"
+    "test_81614827b018fd53d26215682fe",
+    "test_981fd0ef453b37dc39285bc7ec9"
   );
 
   var data = new Insta.PaymentData();
@@ -266,8 +266,8 @@ router.post("/event/:id", ensureAuthenticated, (req, res) => {
         }
         if (!userenrolledforevent) {
           Insta.setKeys(
-            "test_ac6c027a59cd53e60732eff67fe",
-            "test_356206b1bea68d2bf3eedb9261f"
+            "test_81614827b018fd53d26215682fe",
+            "test_981fd0ef453b37dc39285bc7ec9"
           );
 
           var data = new Insta.PaymentData();
@@ -441,7 +441,7 @@ router.get("/cb/:id", (req, res) => {
 
 //     // if(req.body.seats!=='0'){
 
-//     Insta.setKeys('test_ac6c027a59cd53e60732eff67fe', 'test_356206b1bea68d2bf3eedb9261f');
+//     Insta.setKeys('test_81614827b018fd53d26215682fe', 'test_981fd0ef453b37dc39285bc7ec9');
 
 //     var data = new Insta.PaymentData();
 
@@ -578,8 +578,8 @@ router.post("/projectintermediate/:id", (req, res) => {
       }
       if (!internnexusproject) {
         Insta.setKeys(
-          "test_ac6c027a59cd53e60732eff67fe",
-          "test_356206b1bea68d2bf3eedb9261f"
+          "test_81614827b018fd53d26215682fe",
+          "test_981fd0ef453b37dc39285bc7ec9"
         );
 
         var data = new Insta.PaymentData();
@@ -764,8 +764,8 @@ router.post("/projectadvance/:id", (req, res) => {
       }
       if (!internnexusproject) {
         Insta.setKeys(
-          "test_ac6c027a59cd53e60732eff67fe",
-          "test_356206b1bea68d2bf3eedb9261f"
+          "test_81614827b018fd53d26215682fe",
+          "test_981fd0ef453b37dc39285bc7ec9"
         );
 
         var data = new Insta.PaymentData();
@@ -949,8 +949,8 @@ router.post("/projecthot/:id", (req, res) => {
       }
       if (!internnexusproject) {
         Insta.setKeys(
-          "test_ac6c027a59cd53e60732eff67fe",
-          "test_356206b1bea68d2bf3eedb9261f"
+          "test_81614827b018fd53d26215682fe",
+          "test_981fd0ef453b37dc39285bc7ec9"
         );
 
         var data = new Insta.PaymentData();

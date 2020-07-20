@@ -5469,7 +5469,7 @@ router.post("/companyinternupdate", isCompany, function (req, res) {
     res.redirect("../users/requestintern");
   });
 });
-router.get("/company-update-intern/:id", function (req, res) {
+router.get("/company-update-intern/:id", isCompany, function (req, res) {
   var id = req.params.id;
   Comp.find(function (err, user) {
     Reqintern.find(function (err, reqintern) {
@@ -5483,8 +5483,9 @@ router.get("/company-update-intern/:id", function (req, res) {
     });
   });
 });
-router.post("/company-update-intern", isCompany, function (req, res) {
-  new Reqintern({
+router.put("/company-update-intern/:id", isCompany, function (req, res) {
+  var query = { _id: req.params.id };
+  var update = {
     number: req.body.number,
     duration: req.body.duration,
     phone: req.body.phone,
@@ -5510,8 +5511,10 @@ router.post("/company-update-intern", isCompany, function (req, res) {
     emailaddress: req.body.emailaddress,
     contactno: req.body.contactno,
     companyname: req.body.companyname,
-  }).save(function (err, Reqintern) {
-    console.log(Reqintern);
+  };
+  var options = { new: true };
+  Reqintern.findOneAndUpdate(query, update, options, function (err, reqintern) {
+    console.log(reqintern);
     Comp.find(function (err, user) {
       res.render("company-update-intern-success", {
         title: "Student Request Update",
@@ -5541,7 +5544,7 @@ router.post("/company-update-intern", isCompany, function (req, res) {
 // 	});
 // });
 
-router.get("/closeyourquery/:id", function (req, res) {
+router.get("/closeyourquery/:id", isCompany,function (req, res) {
   var id = req.params.id;
   Comp.find(function (err, user) {
     Reqintern.find(function (err, reqintern) {
@@ -5555,7 +5558,7 @@ router.get("/closeyourquery/:id", function (req, res) {
     });
   });
 });
-router.put("/closeyourquery/:id", function (req, res) {
+router.put("/closeyourquery/:id", isCompany, function (req, res) {
   // var id =req.params.id;
   var query = { _id: req.params.id };
   // var id= req.params.id;
@@ -5586,7 +5589,7 @@ router.get("/close-query-in-progress", isCompany, function (req, res) {
     });
   });
 });
-router.delete("/company-delete-intern/:id", function (req, res) {
+router.delete("/company-delete-intern/:id",isCompany, function (req, res) {
   // var id= req.params.id;
   var query = { _id: req.params.id };
   Reqintern.findOneAndRemove(query, function (err, reqintern) {
@@ -5600,7 +5603,7 @@ router.delete("/company-delete-intern/:id", function (req, res) {
     });
   });
 });
-router.get("/moreintern/:id", function (req, res) {
+router.get("/moreintern/:id", isCompany,function (req, res) {
   var id = req.params.id;
   Comp.find(function (err, user) {
     Reqintern.find(function (err, reqintern) {

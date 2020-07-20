@@ -244,29 +244,29 @@
                       <tbody>
         
                         {% for projectquery in  Projectquery %}
-                        
+                        {% if projectquery.internnexusprojectid == internnexusprojectid  %}
                         <tr>
                           <td>
                             {{projectquery.username}}
                           </td>
                           <td>
                                 {{projectquery.projectname}}
-                          </td> 
+                          </td>
                           <td>
                                 {{projectquery.name}}
                           </td>
                          
                         <td>
                             {% if projectquery.reviewcount==0 %}
-                        <button id= "button" class="btn btn-default"><a href="admin-project-query-answer/{{projectquery.id}}">Answer</a></button>
+                        <button id= "button" class="btn btn-primary"><a href="../admin-project-query-answer/{{projectquery.id}}">Not Answered</a></button>
                             {% endif %}
                             {% if projectquery.reviewcount ==1 %}
-                            <button id= "button" class="btn btn-default"><a href="#">Answer</a></button>
+                            <button id= "button" class="btn btn-primary"><a href="#">Answered</a></button>
                             {% endif %}
                         </td>
                         
                         </tr>
-                  
+                  	{% endif %}
                     {% endfor %}
                         
                         

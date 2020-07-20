@@ -139,7 +139,7 @@
       <div class="content">
         <div class="container-fluid">
           <div class="container-fluid">
-            <div class="card card-plain">
+            <div class="card">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">Request Student Update </h4>
                 <!-- <p class="card-category">Category</a> -->
@@ -151,7 +151,7 @@
                     {% for reqintern in Reqintern %}
                     {% if reqintern.id == id %}
                     <!-- <form action="/users/company-update-intern/{{reqintern.id}}?_method=PUT" method="POST"> -->
-                      <form action="/users/company-update-intern" method="POST">
+                      <form action="/users/company-update-intern/{{reqintern.id}}?_method=PUT" method="POST">
                       <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
@@ -236,14 +236,48 @@
                                     <option value="5">Web Development-Javascript</option>
                                     <option value="6">Web Development- PHP</option>
                                     <option value="7">Web Development- Python</option> -->
-                                    <li><p><input type="checkbox" name="AI" value="AI/ML" > AI/ML</p></li>
+                                    {% if reqintern.AI =="AI/ML" %}
+                                    <li><p><input type="checkbox" name="AI" value="AI/ML" checked> AI/ML</p></li>
+                                    {% endif %}
+                                    {% if reqintern.AI =="" %}
+                                    <li><p><input type="checkbox" name="AI" value="AI/ML"> AI/ML</p></li>
+                                    {% endif %}
+                                    {% if reqintern.gd =="AI/ML" %}
+                                    <li><p><input type="checkbox" name="gd" value="GraphicDesign" checked>Graphic Design</p></li>
+                                    {% endif %}
+                                    {% if reqintern.gd =="" %}
                                     <li><p><input type="checkbox" name="gd" value="GraphicDesign" >Graphic Design</p></li>
+                                    {% endif %}
+                                    {% if reqintern.market =="Marketing" %}
+                                    <li><p><input type="checkbox" name="market" value="Marketing" checked>Marketing</p></li>
+                                    {% endif %}
+                                    {% if reqintern.market=="" %}
                                     <li><p><input type="checkbox" name="market" value="Marketing" >Marketing</p></li>
+                                    {% endif %}
+                                    {% if reqintern.cybersec=="Cybersecurity" %}
+                                    <li><p><input type="checkbox" name="cybersec" value="Cybersecurity" checked>Cybersecurity</p></li>
+                                    {% endif %}
+                                    {% if reqintern.cybersec=="" %}
                                     <li><p><input type="checkbox" name="cybersec" value="Cybersecurity" >Cybersecurity</p></li>
+                                    {% endif %}
+                                    {% if reqintern.webdjs=="Web Development-Javascript" %}
+                                    <li><p><input type="checkbox" name="webdjs" value="Web Development-Javascript" checked>Web Development-Javascript</p></li>
+                                    {% endif %}
+                                    {% if reqintern.webdjs =="" %}
                                     <li><p><input type="checkbox" name="webdjs" value="Web Development-Javascript" >Web Development-Javascript</p></li>
+                                    {% endif %}
+                                    {% if reqintern.webdph =="Web Development- PHP" %}
+                                    <li><p><input type="checkbox" name="webdph" value="Web Development- PHP" checked>Web Development- PHP</p></li>
+                                    {% endif %}
+                                    {% if reqintern.webdph=="" %}
                                     <li><p><input type="checkbox" name="webdph" value="Web Development- PHP">Web Development- PHP</p></li>
-                                    <li><p><input type="checkbox" name="webdpy" value="Web Development- Python">Web Development- Python</p></li>
-                                    
+                                    {% endif %}
+                                    {% if reqintern.webdpy =="Web Development- Python" %}
+                                    <li><p><input type="checkbox" name="webdpy" value="Web Development- Python" checked>Web Development- Python</p></li>
+                                    {% endif %}
+                                    {% if reqintern.webdpy =="" %}
+                                    <li><p><input type="checkbox" name="webdpy" value="Web Development- Python" >Web Development- Python</p></li>
+                                    {% endif %}
                                     
                                   </ul>
                                 
