@@ -1,4 +1,4 @@
-# Globalshala-Demo-Web-App
+# Globalshala Hackathon - Winner (1st Position)
 Globalshala is a rising platform for connecting students and Universities by providing admission to students in their dream universities. Our aim is to improve easiness of opportunities for students and Universities. We focus on quality of Students, practical approach and authenticity of procedure. To improve easiness of opportunities for students, encouraging Admission and enhancing their skills is our main aim.
 
 # Our Mission
