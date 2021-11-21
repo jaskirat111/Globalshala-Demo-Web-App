@@ -1,7 +1,7 @@
 # Globalshala Hackathon - Winner (1st Position)
 Globalshala is a rising platform for connecting students and Universities by providing admission to students in their dream universities. Our aim is to improve easiness of opportunities for students and Universities. We focus on quality of Students, practical approach and authenticity of procedure. To improve easiness of opportunities for students, encouraging Admission and enhancing their skills is our main aim.
 
-## PPT Link: https://docs.google.com/presentation/d/1ZZLbXwAZqaKOjT2ViJWx3RxMfKIFYjVd/edit?usp=sharing&ouid=112918294878699280836&rtpof=true&sd=true
+PPT Link: https://docs.google.com/presentation/d/1ZZLbXwAZqaKOjT2ViJWx3RxMfKIFYjVd/edit?usp=sharing&ouid=112918294878699280836&rtpof=true&sd=true
 
 # Our Mission
 Our platform connects students and Universities by providing admission to students. We assure quality of students with our task oriented approach. Students are verified of their skills using our online tests. Build your resume with our progressing tasks and increase your skills required by Universities.
