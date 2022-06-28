@@ -3,7 +3,8 @@ Globalshala is a rising platform for connecting students and Universities by pro
 
 PPT Link: https://docs.google.com/presentation/d/1ZZLbXwAZqaKOjT2ViJWx3RxMfKIFYjVd/edit?usp=sharing&ouid=112918294878699280836&rtpof=true&sd=true
 
-Video Links : https://youtu.be/xaowFexS3ZI, https://youtu.be/F0g7GYtYjbw
+Video Link1 : https://youtu.be/xaowFexS3ZI
+Video Link2 : https://youtu.be/F0g7GYtYjbw
 
 # Our Mission
 Our platform connects students and Universities by providing admission to students. We assure quality of students with our task oriented approach. Students are verified of their skills using our online tests. Build your resume with our progressing tasks and increase your skills required by Universities.
